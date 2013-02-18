@@ -1,0 +1,25 @@
+<html>	
+	<body>
+		<header>	
+			<h2>Example: Url Validation App</h2> 
+		</header>
+		<form action="/" method="post">
+			{% csrf_token %}
+			{% for field in form %}
+		        <div class="fieldWrapper">
+		            {{ field.errors }}
+		            {{ field.label_tag }}: {{ field }}
+		        </div>
+	    	{% endfor %}
+	    	<div>
+	    		<p>
+	    			Largest Image Url :
+	    		</p>
+	    		<a href="{{ imgUrl }}" target="_blink">{{ imgUrl }}</a>
+	    	</div>	    		
+	    	<p>
+	    		<input type="submit" value="Send message" />    		
+	    	</p>
+    	</form>
+	</body>
+</html>
