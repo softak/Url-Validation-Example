@@ -24,7 +24,7 @@ def home(request):
     })
 
 
-def get_url_content(url): # get html content for given url 
+def get_url_content(url): # Get largest Image url for given url 
     try:
         result = urllib2.urlopen(url).read()
     except ValueError as e:
